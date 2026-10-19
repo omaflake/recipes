@@ -1,0 +1,74 @@
+# omaflake recipes
+
+The official catalog of recipes for [omaflake](https://github.com/omaflake/omaflake) – disposable NixOS and macOS
+VMs on Apple silicon. A recipe declares what a VM is: what is inside it (a NixOS or nix-darwin module) and how it runs
+(CPUs, memory, network, …). omaflake builds an image from a recipe and starts VMs from that image.
+
+omaflake does not ship recipes in the app. It knows this repository as its default **recipe source**: the Recipes tab
+lists what is here, and you download the recipes you want. Recipes by `omaflake` from this repository are marked as
+official and suggested at the first start. Anyone can propose a recipe by pull request (CONTRIBUTING.md); the core
+team reviews it (REVIEW.md) before it is merged. You can also run a catalog of your own (FORKING.md).
+
+## Layout
+
+```
+catalog.json                    generated – the one file omaflake reads to browse this source
+source.toml                     name and description of this source, allowed licenses
+tags.toml                       the tags recipes may use
+recipes/<author>/<kind>/<name>/ one folder per recipe
+  recipe.toml                   metadata and how a VM from it runs
+  default.nix                   what is inside it: a NixOS module (kind nixos) or a nix-darwin module (kind macos)
+  …                             its own files: scripts, configs, icons, assets
+tools/catalog.py                checks every recipe and writes catalog.json
+.github/                        CI (the same check) and the pull request checklist
+```
+
+- `<author>` is the GitHub name of whoever submitted the recipe (`omaflake` for the core team's). The folder is the
+  recipe's identity: its ID is `<author>.<kind>.<name>`, shown as `<author>/<kind>/<name>`, so recipes of different
+  authors never collide.
+- `<kind>` is the guest kind, `nixos` or `macos`. A recipe for both kinds is two folders.
+- A recipe is a module on top of omaflake's own guest modules (guest hardware, the omaflake agent, user, keys, locale),
+  never a flake of its own. It can build on another recipe of the same kind (`requires`, then `imports = [ ../minimal ]`).
+
+## Recipes
+
+| Recipe | |
+|---|---|
+| `omaflake/nixos/minimal` | NixOS with the Hyprland desktop |
+| `omaflake/nixos/research` | TeX Live and Typst with a live PDF beside neovim, Jupyter, pandas, pandoc |
+| `omaflake/macos/minimal` | macOS with Nix, terminal tools, a minimal Dock and a dark look |
+| `omaflake/macos/research` | TeX Live, VS Code for LaTeX and Typst, WezTerm with Zellij, Homebrew |
+| `omaflake/nixos/lab`, `omaflake/macos/lab` | for developing omaflake itself (shown in developer mode only) |
+
+## How omaflake uses `catalog.json`
+
+`catalog.json` lists every recipe with its metadata (description, tags, license, guest kind, defaults), a `version`
+and each of its files with size and SHA-256. omaflake
+
+1. fetches `catalog.json` from the source's URL – only when you open or search the Recipes tab, never in the
+   background;
+2. searches and filters it locally (name, description, tags, guest kind, author);
+3. downloads a recipe's files next to `catalog.json` (`<url>/<path>/<file>`) and checks every SHA-256 before it
+   keeps them, together with the recipes it `requires`;
+4. compares an installed recipe's `version` with the catalog's to offer updates.
+
+A public source needs no GitHub API, so it works from any static web server. A private GitHub repository works too:
+omaflake reads it over the GitHub API with a fine-grained token (Contents: Read-only), which it checks when you add
+the source and keeps in your Keychain. A **local folder** (a checkout of this repository, or any folder with
+`recipes/<author>/<kind>/<name>/`) needs no `catalog.json`: omaflake uses its recipes as they are on disk, so a
+change is built the next time – that is how recipes are written and tested. Downloaded recipes live in omaflake's
+data folder (`recipes/<author>/<kind>/<name>/`); omaflake's spec §11.3 describes sources, installing and updates.
+
+## Checking
+
+```sh
+python3 tools/catalog.py           # check every recipe, write catalog.json
+python3 tools/catalog.py --check   # check, and fail if catalog.json is not up to date (CI does this)
+```
+
+It needs Python 3.11 or newer; the Python that comes with macOS is older – `nix run nixpkgs#python3 -- tools/catalog.py`.
+
+## License
+
+The repository is MIT licensed (LICENSE). Each recipe states its own license in `recipe.toml`; the allowed ones are
+in `source.toml`.

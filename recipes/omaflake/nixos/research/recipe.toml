@@ -1,0 +1,15 @@
+# Recipe nixos/research – how a VM from it runs; what is inside it is default.nix next to this file.
+# Fields: see CONTRIBUTING.md at the root of this repository.
+
+author = "omaflake"
+license = "MIT"
+display = "gpu"
+description = "Writing and research: TeX Live (full) and Typst with a live PDF beside neovim (vimtex, zathura), Jupyter, pandas, pandoc."
+description_de = "Schreiben und Forschen: TeX Live (komplett) und Typst mit Live-PDF neben neovim (vimtex, zathura), Jupyter, pandas, pandoc."
+tags = ["latex", "typst", "neovim", "python", "jupyter", "pandoc"]
+cpus = 6
+memory_gb = 12
+disk_gb = 60
+network = "shared"
+share = true
+ephemeral = false

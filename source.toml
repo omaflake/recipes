@@ -1,0 +1,9 @@
+# This recipe source – what omaflake shows for it in the Recipes tab and in Settings → Recipe Sources.
+# A fork or an own catalog changes these values (FORKING.md).
+
+name = "omaflake"
+description = "The official omaflake recipes, reviewed by the omaflake core team."
+homepage = "https://github.com/omaflake/recipes"
+
+# Licenses a recipe here may use (SPDX identifiers); empty = any
+licenses = ["MIT", "Apache-2.0", "BSD-2-Clause", "BSD-3-Clause", "MPL-2.0", "0BSD", "Unlicense"]

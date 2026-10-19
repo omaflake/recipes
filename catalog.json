@@ -1,0 +1,307 @@
+{
+  "schema": 1,
+  "source": {
+    "name": "omaflake",
+    "description": "The official omaflake recipes, reviewed by the omaflake core team.",
+    "homepage": "https://github.com/omaflake/recipes"
+  },
+  "recipes": [
+    {
+      "id": "omaflake.macos.lab",
+      "author": "omaflake",
+      "kind": "macos",
+      "name": "lab",
+      "path": "recipes/omaflake/macos/lab",
+      "description": "For developing omaflake on macOS: minimal plus the omaflake Test app (sound, microphone, clipboard) and tools; fresh at every start.",
+      "descriptions": {
+        "de": "Zum Entwickeln von omaflake unter macOS: minimal plus die App omaflake Test (Ton, Mikrofon, Zwischenablage) und Werkzeuge; bei jedem Start frisch."
+      },
+      "tags": [
+        "development",
+        "test"
+      ],
+      "license": "MIT",
+      "lab": true,
+      "requires": [
+        "omaflake/macos/minimal"
+      ],
+      "homepage": "",
+      "defaults": {
+        "display": "window",
+        "cpus": 4,
+        "memory_gb": 8,
+        "disk_gb": 60,
+        "network": "shared",
+        "share": true,
+        "ephemeral": true,
+        "microphone": true
+      },
+      "version": "a864466b9a7c3f5fed1691f6204aeca1310741c94db29b41ac856ac99547255c",
+      "files": [
+        {
+          "path": "default.nix",
+          "size": 2042,
+          "sha256": "22f99a02894d3aa6db8df745e3a1ef9ff2042bf1238f0cb9aca78fc0d98109c1"
+        },
+        {
+          "path": "omaflake-test.icns",
+          "size": 347346,
+          "sha256": "9a148585e14904d699a6f79516b3c7bcd6842857355b7227b9736350e5e4c8e7"
+        },
+        {
+          "path": "omaflake-test.sh",
+          "size": 2578,
+          "sha256": "0dfccd7a6e713faaf069566a5df8939c0fe212e052e6c73be2a5abe803e2cd56"
+        },
+        {
+          "path": "recipe.toml",
+          "size": 916,
+          "sha256": "592e1cbfc01b8c90bbde945d92456aae828a30b54f2074841715e9b1d5d64826"
+        }
+      ]
+    },
+    {
+      "id": "omaflake.macos.minimal",
+      "author": "omaflake",
+      "kind": "macos",
+      "name": "minimal",
+      "path": "recipes/omaflake/macos/minimal",
+      "description": "macOS with Nix, terminal tools, a minimal Dock and a dark look.",
+      "descriptions": {
+        "de": "macOS mit Nix, Terminal-Werkzeugen, schlichtem Dock und dunklem Aussehen."
+      },
+      "tags": [
+        "nix",
+        "terminal"
+      ],
+      "license": "MIT",
+      "lab": false,
+      "requires": [],
+      "homepage": "",
+      "defaults": {
+        "display": "window",
+        "cpus": 4,
+        "memory_gb": 8,
+        "disk_gb": 60,
+        "network": "shared",
+        "share": true,
+        "ephemeral": false
+      },
+      "version": "0dd557be459dd03fb4d0a1635af7b1d1be6bb995d7a41bbbc006d2ebbfcf264e",
+      "files": [
+        {
+          "path": "assets/safari-bookmarks-seed.plist",
+          "size": 1219,
+          "sha256": "af7e561ecf841ea6f72086db8f24f1e99b7c5e01006ccca95f57d388f90f0cf5"
+        },
+        {
+          "path": "assets/wallpaper-black.plist",
+          "size": 1973,
+          "sha256": "53c05f86f2410796c06b1dc1c2bcc9fbaf10922b7fc6305529164ac8f670df7f"
+        },
+        {
+          "path": "assets/widgets-empty-placement.plist",
+          "size": 282,
+          "sha256": "61aea308236d97653daa83c04c0ca955b6babddbc8ddc9ea07837332bdbb2ca7"
+        },
+        {
+          "path": "default.nix",
+          "size": 6449,
+          "sha256": "213fca5fa1f9a92a5882e46ff253c3bb0be7e8d5cb75e295c618f36c5c5e5eda"
+        },
+        {
+          "path": "recipe.toml",
+          "size": 572,
+          "sha256": "874c78d53fb0dc2a4cfd98335f1b15532b4a4f8f55dfb1be9765fd1a63a07720"
+        }
+      ]
+    },
+    {
+      "id": "omaflake.macos.research",
+      "author": "omaflake",
+      "kind": "macos",
+      "name": "research",
+      "path": "recipes/omaflake/macos/research",
+      "description": "Writing and research: TeX Live (full), VS Code for LaTeX and Typst (VS Code is unfree software), WezTerm with Zellij, Typst, pandoc, lazygit, Homebrew.",
+      "descriptions": {
+        "de": "Schreiben und Forschen: TeX Live (komplett), VS Code für LaTeX und Typst (VS Code ist keine freie Software), WezTerm mit Zellij, Typst, pandoc, lazygit, Homebrew."
+      },
+      "tags": [
+        "latex",
+        "typst",
+        "vscode",
+        "wezterm",
+        "zellij",
+        "pandoc",
+        "homebrew"
+      ],
+      "license": "MIT",
+      "lab": false,
+      "requires": [
+        "omaflake/macos/minimal"
+      ],
+      "homepage": "",
+      "defaults": {
+        "display": "window",
+        "cpus": 4,
+        "memory_gb": 8,
+        "disk_gb": 80,
+        "network": "shared",
+        "share": true,
+        "ephemeral": false
+      },
+      "version": "aac54b08797ceccc96a57a22ddac52832c330bdf2f7e0d626379696068b488bd",
+      "files": [
+        {
+          "path": "default.nix",
+          "size": 4392,
+          "sha256": "8b1edbcea9385b755565c27e7e28d8904152fcf59813bb7da6900330724455de"
+        },
+        {
+          "path": "recipe.toml",
+          "size": 817,
+          "sha256": "1df16faede2130f9e7d24156a46a69c61583f8548fcb1ade978443f538963826"
+        },
+        {
+          "path": "wezterm.lua",
+          "size": 888,
+          "sha256": "c6b1e1a5c1b48598a70f69c8bdd111c3f544f3d03ee2d40b24b850f83a52607e"
+        }
+      ]
+    },
+    {
+      "id": "omaflake.nixos.lab",
+      "author": "omaflake",
+      "kind": "nixos",
+      "name": "lab",
+      "path": "recipes/omaflake/nixos/lab",
+      "description": "For developing omaflake: the omaflake Test app (camera, sound, microphone, clipboard) and debug tools; fresh at every start.",
+      "descriptions": {
+        "de": "Zum Entwickeln von omaflake: die App omaflake Test (Kamera, Ton, Mikrofon, Zwischenablage) und Debug-Werkzeuge; bei jedem Start frisch."
+      },
+      "tags": [
+        "development",
+        "test"
+      ],
+      "license": "MIT",
+      "lab": true,
+      "requires": [],
+      "homepage": "",
+      "defaults": {
+        "display": "gpu",
+        "cpus": 4,
+        "memory_gb": 8,
+        "disk_gb": 60,
+        "network": "shared",
+        "share": true,
+        "ephemeral": true,
+        "camera": true,
+        "microphone": true
+      },
+      "version": "32cfa772daa179f368038b2e4deba829930865a9b4a932c43c13a98319134849",
+      "files": [
+        {
+          "path": "default.nix",
+          "size": 1971,
+          "sha256": "8054668d1c7998a2e14aeb655c0793b69a56daafc78b57b05cb8b66cea3c4121"
+        },
+        {
+          "path": "omaflake-test.py",
+          "size": 7962,
+          "sha256": "c3ecdf4bf6ab3c0d189557a20d719b4282032fa3264bbeab7fcdf08593cdd030"
+        },
+        {
+          "path": "recipe.toml",
+          "size": 821,
+          "sha256": "14bfbc501dc6d646e727fa3bcc6aaf1df71c07371ce6f590e8b9b75a64b59def"
+        }
+      ]
+    },
+    {
+      "id": "omaflake.nixos.minimal",
+      "author": "omaflake",
+      "kind": "nixos",
+      "name": "minimal",
+      "path": "recipes/omaflake/nixos/minimal",
+      "description": "NixOS with the Hyprland desktop – nothing else.",
+      "descriptions": {
+        "de": "NixOS mit dem Hyprland-Desktop – sonst nichts."
+      },
+      "tags": [
+        "desktop",
+        "hyprland"
+      ],
+      "license": "MIT",
+      "lab": false,
+      "requires": [],
+      "homepage": "",
+      "defaults": {
+        "display": "gpu",
+        "cpus": 4,
+        "memory_gb": 4,
+        "disk_gb": 40,
+        "network": "shared",
+        "share": true,
+        "ephemeral": false
+      },
+      "version": "75a51af9db26bc611a267c271e1e254b1afa6cc5b6729b9fc0f19b291fc66c9e",
+      "files": [
+        {
+          "path": "default.nix",
+          "size": 102,
+          "sha256": "6ee0a9f87b172db28e2a0b2c3e709d5f90c426e2271cf45b799a2dff3ab992ba"
+        },
+        {
+          "path": "recipe.toml",
+          "size": 677,
+          "sha256": "7a516eab066b2d5c13ce77e837b8cfd4f8ffe4f91b8980e8ad7abcaeaf7d4ada"
+        }
+      ]
+    },
+    {
+      "id": "omaflake.nixos.research",
+      "author": "omaflake",
+      "kind": "nixos",
+      "name": "research",
+      "path": "recipes/omaflake/nixos/research",
+      "description": "Writing and research: TeX Live (full) and Typst with a live PDF beside neovim (vimtex, zathura), Jupyter, pandas, pandoc.",
+      "descriptions": {
+        "de": "Schreiben und Forschen: TeX Live (komplett) und Typst mit Live-PDF neben neovim (vimtex, zathura), Jupyter, pandas, pandoc."
+      },
+      "tags": [
+        "latex",
+        "typst",
+        "neovim",
+        "python",
+        "jupyter",
+        "pandoc"
+      ],
+      "license": "MIT",
+      "lab": false,
+      "requires": [],
+      "homepage": "",
+      "defaults": {
+        "display": "gpu",
+        "cpus": 6,
+        "memory_gb": 12,
+        "disk_gb": 60,
+        "network": "shared",
+        "share": true,
+        "ephemeral": false
+      },
+      "version": "ce3c0fdc62a92093bd7d449cc69b010aab1e26ea19084ade9d56b76511375af4",
+      "files": [
+        {
+          "path": "default.nix",
+          "size": 2431,
+          "sha256": "ab6b5606e7ace8fb05bbff109d103f2326b25743fc014594ef6ced4ee27e8937"
+        },
+        {
+          "path": "recipe.toml",
+          "size": 653,
+          "sha256": "c5143f519d3cfe530cc0ef2c5aed94b2b923ee0d4ef7f0680f5cdbc5691e02bc"
+        }
+      ]
+    }
+  ]
+}
