@@ -10,9 +10,10 @@ to this one as `../omaflake`; its design for recipe sources is `../omaflake/docs
 
 - **Language:** everything in this repository is English. Talk to the maintainer in German.
 - **Public from day one:** no personal data in tracked files (names, home paths, host names, keys).
-- **The format is an interface.** `catalog.json` (schema 1), the folder layout `recipes/<author>/<kind>/<name>/` and
-  the `recipe.toml` fields are what omaflake reads. Change them only together with omaflake, and raise `SCHEMA` in
-  `tools/catalog.py` for changes an older omaflake would misread.
+- **The format is an interface.** `catalog.json` (`$schema` catalog/v2), the folder layout `recipes/<author>/<kind>/<name>/`
+  and the `recipe.toml` fields (`"$schema"` recipe/v1) are what omaflake reads; the JSON Schemas live in omaflake's
+  `docs/schema/`. Change them only together with omaflake, and raise the version in `tools/catalog.py` for changes an
+  older omaflake would misread.
 - **After every change:** `python3 tools/catalog.py` (or `nix run nixpkgs#python3 -- tools/catalog.py`) and commit
   `catalog.json` with the change; `--check` must pass.
 - **Recipes:** omaflake's own recipes are under `recipes/omaflake/`. A change to them is tested by building an image

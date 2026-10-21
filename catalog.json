@@ -1,5 +1,5 @@
 {
-  "schema": 1,
+  "$schema": "https://omaflake.dev/schema/catalog/v2.json",
   "source": {
     "name": "omaflake",
     "description": "The official omaflake recipes, reviewed by the omaflake core team.",
@@ -22,6 +22,9 @@
       ],
       "license": "MIT",
       "lab": true,
+      "systems": [
+        "aarch64-darwin"
+      ],
       "requires": [
         "omaflake/macos/minimal"
       ],
@@ -36,7 +39,7 @@
         "ephemeral": true,
         "microphone": true
       },
-      "version": "a864466b9a7c3f5fed1691f6204aeca1310741c94db29b41ac856ac99547255c",
+      "version": "6aab037ac5b75ca4156305cdf7b69e3e332d7be54c52e8c578d2bbd77a15001b",
       "files": [
         {
           "path": "default.nix",
@@ -55,8 +58,8 @@
         },
         {
           "path": "recipe.toml",
-          "size": 916,
-          "sha256": "592e1cbfc01b8c90bbde945d92456aae828a30b54f2074841715e9b1d5d64826"
+          "size": 1075,
+          "sha256": "1a7023f5d051bdda5030cdc3c5592d83c26e8e3097c4749be318766195844bc5"
         }
       ]
     },
@@ -76,6 +79,9 @@
       ],
       "license": "MIT",
       "lab": false,
+      "systems": [
+        "aarch64-darwin"
+      ],
       "requires": [],
       "homepage": "",
       "defaults": {
@@ -87,7 +93,7 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "0dd557be459dd03fb4d0a1635af7b1d1be6bb995d7a41bbbc006d2ebbfcf264e",
+      "version": "c7bc4569c3068c9c0a8aef6c69a61bfe3bce090254071474de058a5f9cdda717",
       "files": [
         {
           "path": "assets/safari-bookmarks-seed.plist",
@@ -111,8 +117,8 @@
         },
         {
           "path": "recipe.toml",
-          "size": 572,
-          "sha256": "874c78d53fb0dc2a4cfd98335f1b15532b4a4f8f55dfb1be9765fd1a63a07720"
+          "size": 731,
+          "sha256": "f7d4ab9942ba058e62b816eee4ac655f9f31a25351bbdd278b8f1b93184bf882"
         }
       ]
     },
@@ -137,6 +143,9 @@
       ],
       "license": "MIT",
       "lab": false,
+      "systems": [
+        "aarch64-darwin"
+      ],
       "requires": [
         "omaflake/macos/minimal"
       ],
@@ -150,7 +159,7 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "aac54b08797ceccc96a57a22ddac52832c330bdf2f7e0d626379696068b488bd",
+      "version": "3130e6d57190ed0f1781cedbdf08987c7b4cd7d6d430059901089d7af08c5f97",
       "files": [
         {
           "path": "default.nix",
@@ -159,8 +168,8 @@
         },
         {
           "path": "recipe.toml",
-          "size": 817,
-          "sha256": "1df16faede2130f9e7d24156a46a69c61583f8548fcb1ade978443f538963826"
+          "size": 976,
+          "sha256": "9cf9c9a952c35897d775b854f2311baf42793dfcb7c68fefe2ceba0f85d8ef58"
         },
         {
           "path": "wezterm.lua",
@@ -185,6 +194,9 @@
       ],
       "license": "MIT",
       "lab": true,
+      "systems": [
+        "aarch64-linux"
+      ],
       "requires": [],
       "homepage": "",
       "defaults": {
@@ -198,7 +210,7 @@
         "camera": true,
         "microphone": true
       },
-      "version": "32cfa772daa179f368038b2e4deba829930865a9b4a932c43c13a98319134849",
+      "version": "d5f84712de34bfda8dfacd263585bc596930afe1711bc2da4e6f67a125f8cc88",
       "files": [
         {
           "path": "default.nix",
@@ -212,8 +224,8 @@
         },
         {
           "path": "recipe.toml",
-          "size": 821,
-          "sha256": "14bfbc501dc6d646e727fa3bcc6aaf1df71c07371ce6f590e8b9b75a64b59def"
+          "size": 979,
+          "sha256": "ee56e8ff4755968aa959da49fe111f46d2487ae5f9aaa84c12e7c02c614a3531"
         }
       ]
     },
@@ -233,6 +245,9 @@
       ],
       "license": "MIT",
       "lab": false,
+      "systems": [
+        "aarch64-linux"
+      ],
       "requires": [],
       "homepage": "",
       "defaults": {
@@ -244,7 +259,7 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "75a51af9db26bc611a267c271e1e254b1afa6cc5b6729b9fc0f19b291fc66c9e",
+      "version": "1402004d58f95f73090cb50301dffe70795820976379e456fff50268d5b5a778",
       "files": [
         {
           "path": "default.nix",
@@ -253,8 +268,8 @@
         },
         {
           "path": "recipe.toml",
-          "size": 677,
-          "sha256": "7a516eab066b2d5c13ce77e837b8cfd4f8ffe4f91b8980e8ad7abcaeaf7d4ada"
+          "size": 835,
+          "sha256": "218faa580c43cda964504797ac52c787a626e7c541f1c89a2a9b9819a40c0ade"
         }
       ]
     },
@@ -278,6 +293,9 @@
       ],
       "license": "MIT",
       "lab": false,
+      "systems": [
+        "aarch64-linux"
+      ],
       "requires": [],
       "homepage": "",
       "defaults": {
@@ -289,7 +307,7 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "ce3c0fdc62a92093bd7d449cc69b010aab1e26ea19084ade9d56b76511375af4",
+      "version": "5253857a65914cef5b15c79174bbfac8611c66268745390695ae1a281671aa4d",
       "files": [
         {
           "path": "default.nix",
@@ -298,8 +316,8 @@
         },
         {
           "path": "recipe.toml",
-          "size": 653,
-          "sha256": "c5143f519d3cfe530cc0ef2c5aed94b2b923ee0d4ef7f0680f5cdbc5691e02bc"
+          "size": 811,
+          "sha256": "d008410690ff4ad20d0caf60a20db77afa1d0b1563527c67f2ce2ab61e9b4498"
         }
       ]
     }

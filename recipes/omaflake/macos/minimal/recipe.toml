@@ -2,6 +2,8 @@
 # Fields: see CONTRIBUTING.md at the root of this repository.
 # macOS: nix-darwin on top of the macOS base (omaf macos install)
 
+"$schema" = "https://omaflake.dev/schema/recipe/v1.json"
+systems = ["aarch64-darwin"] # what it can be built for: aarch64-linux, x86_64-linux | aarch64-darwin
 author = "omaflake"
 license = "MIT"
 display = "window"

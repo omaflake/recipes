@@ -19,16 +19,21 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 RECIPES = ROOT / "recipes"
 CATALOG = ROOT / "catalog.json"
-SCHEMA = 1
+# The JSON Schemas (omaflake/omaflake docs/schema/, published on omaflake.dev): what this catalog is, and what each
+# recipe.toml names in "$schema" – as omaflake's image flake reads it
+SCHEMA = "https://omaflake.dev/schema/catalog/v2.json"      # v2: systems per recipe
+RECIPE_SCHEMA = "https://omaflake.dev/schema/recipe/v1.json"
 
 KINDS = ("nixos", "macos")
+# What a recipe of each kind can be built for (Nix system names); <system>.nix next to default.nix is the variant
+SYSTEMS = {"nixos": ("aarch64-linux", "x86_64-linux"), "macos": ("aarch64-darwin",)}
 NAME = re.compile(r"[a-z0-9][a-z0-9-]*")
 TAG = re.compile(r"[a-z0-9][a-z0-9+.-]*")
 REF = re.compile(r"([a-z0-9][a-z0-9-]*)/(nixos|macos)/([a-z0-9][a-z0-9-]*)")
 
 # recipe.toml: what the catalog lists about a recipe; everything else is how a VM from it runs (its defaults)
-META = {"author", "license", "description", "tags", "lab", "requires", "homepage"}
-REQUIRED = ("author", "license", "description", "tags", "cpus", "memory_gb", "disk_gb", "network", "share",
+META = {"$schema", "author", "license", "description", "tags", "lab", "requires", "homepage", "systems"}
+REQUIRED = ("$schema", "author", "license", "description", "tags", "systems", "cpus", "memory_gb", "disk_gb", "network", "share",
             "ephemeral")
 CHOICES = {"network": ("shared", "isolated", "none"), "display": ("none", "window", "gpu")}
 BOOLS = ("share", "ephemeral", "lab", "audio", "microphone", "clipboard", "camera")
@@ -73,6 +78,16 @@ def check_recipe(folder: Path, data: dict, tags: set[str], licenses: list[str], 
     for key in REQUIRED:
         if key not in data:
             errors.append(f"{where}: recipe.toml needs {key}")
+    if "$schema" in data and data["$schema"] != RECIPE_SCHEMA:
+        errors.append(f"{where}: \"$schema\" = {data['$schema']!r} – recipe.toml names \"{RECIPE_SCHEMA}\"")
+    allowed = SYSTEMS.get(kind, ())
+    systems = data.get("systems", [])
+    if not isinstance(systems, list) or not systems or any(s not in allowed for s in systems):
+        errors.append(f"{where}: systems lists some of {', '.join(allowed)}")
+        systems = []
+    for variant in sorted(folder.glob("*-*.nix")):
+        if variant.stem in allowed and variant.stem not in systems:
+            errors.append(f"{where}/{variant.name}: a variant for {variant.stem}, which systems does not list")
     for key, choices in CHOICES.items():
         if key in data and data[key] not in choices:
             errors.append(f"{where}: {key} is one of {', '.join(choices)}")
@@ -168,6 +183,7 @@ def build() -> tuple[dict, list[str], list[str]]:
             "tags": data.get("tags", []),
             "license": data.get("license", ""),
             "lab": data.get("lab", False),
+            "systems": data.get("systems", []),
             "requires": data.get("requires", []),
             "homepage": data.get("homepage", ""),
             "defaults": {k: v for k, v in data.items() if k not in META and not k.startswith("description_")},
@@ -176,7 +192,7 @@ def build() -> tuple[dict, list[str], list[str]]:
             "files": files,
         })
     catalog = {
-        "schema": SCHEMA,
+        "$schema": SCHEMA,
         "source": {k: source.get(k, "") for k in ("name", "description", "homepage")},
         "recipes": recipes,
     }

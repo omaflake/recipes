@@ -12,6 +12,8 @@ does not have yet. Changes to a merged recipe go the same way; only its author o
 ## `recipe.toml`
 
 ```toml
+"$schema" = "https://omaflake.dev/schema/recipe/v1.json"   # the version of this format – required
+systems = ["aarch64-linux"]      # what it can be built for – required (below)
 author = "your-github-name"      # the folder's author – required
 license = "MIT"                  # SPDX identifier, one of source.toml's licenses – required
 description = "Rust development: rustup, rust-analyzer and neovim with the Rust LSP."   # English – required
@@ -32,6 +34,10 @@ audio = true                     # optional: audio, microphone, clipboard, camer
 lab = false                      # optional: true = development recipe, shown only in omaflake's developer mode
 ```
 
+`systems` names the architectures the recipe is built and tested for, as Nix names them: `aarch64-linux` (NixOS on
+a Mac with Apple silicon) and `x86_64-linux` for kind `nixos`, `aarch64-darwin` for kind `macos`. List only what you
+have tested – omaflake shows a recipe only where it runs, and builds it only for a system it lists.
+
 ## `default.nix`
 
 A NixOS module (kind `nixos`) or a nix-darwin module (kind `macos`). omaflake adds its guest modules around it – guest
@@ -47,6 +53,12 @@ Its module arguments:
 NixOS recipes have home-manager: `home-manager.users.${settings.user} = { … };`. To build on another recipe, list it
 in `requires` and import it relatively: `imports = [ ../minimal ];` (same author and kind) – omaflake keeps the
 `<author>/<kind>/<name>` layout when it downloads recipes, so the path stays valid.
+
+**Variants per architecture.** A file `<system>.nix` next to `default.nix` – e.g. `x86_64-linux.nix` – is added to
+the recipe when it is built for that system (it must be one of `systems`). Put what differs there, such as a package
+that exists for one architecture only; for a small difference `lib.mkIf pkgs.stdenv.hostPlatform.isx86_64 { … }` in
+`default.nix` works as well. A variant belongs to its own recipe: a recipe that imports another (`requires`) gets that
+one's `default.nix` only – import its variant yourself if you need it.
 
 What a recipe must not do:
 
