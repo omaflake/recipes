@@ -38,7 +38,7 @@ tools/catalog.py                checks every recipe and writes catalog.json
 | `omaflake/nixos/research` | TeX Live and Typst with a live PDF beside neovim, Jupyter, pandas, pandoc |
 | `omaflake/macos/minimal` | macOS with Nix, terminal tools, a minimal Dock and a dark look |
 | `omaflake/macos/research` | TeX Live, VS Code for LaTeX and Typst, WezTerm with Zellij, Homebrew |
-| `omaflake/nixos/lab`, `omaflake/macos/lab` | for developing omaflake itself (shown in developer mode only) |
+| `omaflake/nixos/lab`, `omaflake/macos/lab` | for developing omaflake itself (shown in developer mode only); `nixos/lab` brings omaflake's Linux app and `omaf ui` to try them (VMs cannot start inside it) |
 
 ## How omaflake uses `catalog.json`
 

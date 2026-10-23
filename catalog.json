@@ -184,9 +184,9 @@
       "kind": "nixos",
       "name": "lab",
       "path": "recipes/omaflake/nixos/lab",
-      "description": "For developing omaflake: the omaflake Test app (camera, sound, microphone, clipboard) and debug tools; fresh at every start.",
+      "description": "For developing omaflake: the omaflake Test app (camera, sound, microphone, clipboard), debug tools and omaflake itself to try its Linux app and TUI (VMs cannot start inside); fresh at every start.",
       "descriptions": {
-        "de": "Zum Entwickeln von omaflake: die App omaflake Test (Kamera, Ton, Mikrofon, Zwischenablage) und Debug-Werkzeuge; bei jedem Start frisch."
+        "de": "Zum Entwickeln von omaflake: die App omaflake Test (Kamera, Ton, Mikrofon, Zwischenablage), Debug-Werkzeuge und omaflake selbst, um seine Linux-App und TUI auszuprobieren (VMs starten darin nicht); bei jedem Start frisch."
       },
       "tags": [
         "development",
@@ -210,12 +210,12 @@
         "camera": true,
         "microphone": true
       },
-      "version": "d5f84712de34bfda8dfacd263585bc596930afe1711bc2da4e6f67a125f8cc88",
+      "version": "3a4ec90979c06173b372766fdce56ca42a928b409fa18bae6c487eb36496b70b",
       "files": [
         {
           "path": "default.nix",
-          "size": 1971,
-          "sha256": "8054668d1c7998a2e14aeb655c0793b69a56daafc78b57b05cb8b66cea3c4121"
+          "size": 3612,
+          "sha256": "2a30ef9c61fee68410165e443fbe9704cc27a2982494ae4442bf37a5a2e0ed05"
         },
         {
           "path": "omaflake-test.py",
@@ -224,8 +224,8 @@
         },
         {
           "path": "recipe.toml",
-          "size": 979,
-          "sha256": "ee56e8ff4755968aa959da49fe111f46d2487ae5f9aaa84c12e7c02c614a3531"
+          "size": 1154,
+          "sha256": "f78b6bce933f38cd9dbab6b7548b82bf99879518ef4877c5a09a3d23ca4aba2f"
         }
       ]
     },
