@@ -196,7 +196,8 @@
       "license": "MIT",
       "lab": false,
       "systems": [
-        "aarch64-linux"
+        "aarch64-linux",
+        "x86_64-linux"
       ],
       "requires": [],
       "homepage": "",
@@ -209,7 +210,7 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "d0b07e62db3ca94c88465f74d5cc7f6f14433dc4e702b4222a99ac52bd1d5937",
+      "version": "039e260ee8f08f340688a3d9929c1b86b6ba9fd2e9d69b986cb57d8c2be6c7e9",
       "files": [
         {
           "path": "default.nix",
@@ -218,8 +219,8 @@
         },
         {
           "path": "recipe.toml",
-          "size": 825,
-          "sha256": "a5fcf02645f0895e99123fc3e3e05d0b2adf3a69011850216fd63f85ee6a205d"
+          "size": 841,
+          "sha256": "ae1a9c49ad7a202aa2c657eac1d08127db7f10e821d7ece240851da867100cec"
         }
       ]
     },
@@ -240,7 +241,8 @@
       "license": "MIT",
       "lab": true,
       "systems": [
-        "aarch64-linux"
+        "aarch64-linux",
+        "x86_64-linux"
       ],
       "requires": [],
       "homepage": "",
@@ -255,7 +257,7 @@
         "camera": true,
         "microphone": true
       },
-      "version": "3a4ec90979c06173b372766fdce56ca42a928b409fa18bae6c487eb36496b70b",
+      "version": "6c9e7030d1cb7c3a5f995d2c658243dd3a7986c014b10a78ad1a6c58ad6d5c67",
       "files": [
         {
           "path": "default.nix",
@@ -269,8 +271,8 @@
         },
         {
           "path": "recipe.toml",
-          "size": 1154,
-          "sha256": "f78b6bce933f38cd9dbab6b7548b82bf99879518ef4877c5a09a3d23ca4aba2f"
+          "size": 1170,
+          "sha256": "0a4d3ebef7650c817d0be5c572a4a0c3d650f4259367c4bc9c7a8acd0537673d"
         }
       ]
     },
@@ -293,7 +295,8 @@
       "license": "MIT",
       "lab": false,
       "systems": [
-        "aarch64-linux"
+        "aarch64-linux",
+        "x86_64-linux"
       ],
       "requires": [],
       "homepage": "",
@@ -306,7 +309,7 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "41a0051932e3063cf5cf95274c803dd0736dbd4b663d79d2cb2c8b419b640e97",
+      "version": "30640361335dfa81d4a6da0f0915d94792103030e50d25ae12d40a031d842355",
       "files": [
         {
           "path": "default.nix",
@@ -315,8 +318,8 @@
         },
         {
           "path": "recipe.toml",
-          "size": 975,
-          "sha256": "083592d68b4df592754de38b4752e9d8fb09881a217545d854b2289d69781b82"
+          "size": 991,
+          "sha256": "56520122b197ac47fe6a23f34171290a48165ef5ade405ec43f4f26f8cd9b5a1"
         }
       ]
     },
@@ -341,7 +344,8 @@
       "license": "MIT",
       "lab": false,
       "systems": [
-        "aarch64-linux"
+        "aarch64-linux",
+        "x86_64-linux"
       ],
       "requires": [],
       "homepage": "",
@@ -354,7 +358,7 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "ebd5d646d2430e720a217ba86e46f062ff7590f7ff9f9ff94cd50e75c09fb92e",
+      "version": "2226cf6683ddc9af5c3cee1c77ca6373dd30768ddcf79d00dbd5bbd91e4aff39",
       "files": [
         {
           "path": "default.nix",
@@ -363,8 +367,8 @@
         },
         {
           "path": "recipe.toml",
-          "size": 818,
-          "sha256": "88f42ccd52e0b43cd973d287de55d93e1516014206170c3459d57e001be9e3db"
+          "size": 834,
+          "sha256": "5d1250c6e0e8773021586a839967dbb63c4f59ee7ffb2f2cb39581e4674a8285"
         }
       ]
     }

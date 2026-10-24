@@ -3,7 +3,7 @@
 # Development recipe: all integrations on, test app, debug tools and omaflake itself, fresh at every start
 
 "$schema" = "https://omaflake.dev/schema/recipe/v1.json"
-systems = ["aarch64-linux"] # what it can be built for: aarch64-linux, x86_64-linux | aarch64-darwin
+systems = ["aarch64-linux", "x86_64-linux"] # what it can be built for: aarch64-linux, x86_64-linux | aarch64-darwin
 author = "omaflake"
 license = "MIT"
 display = "gpu"
