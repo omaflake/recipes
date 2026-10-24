@@ -1,4 +1,4 @@
-# Recipe nixos/research – how a VM from it runs; what is inside it is default.nix next to this file.
+# Recipe nixos/neovim-research – how a VM from it runs; what is inside it is default.nix next to this file.
 # Fields: see CONTRIBUTING.md at the root of this repository.
 
 "$schema" = "https://omaflake.dev/schema/recipe/v1.json"

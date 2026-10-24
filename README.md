@@ -28,14 +28,15 @@ tools/catalog.py                checks every recipe and writes catalog.json
   authors never collide.
 - `<kind>` is the guest kind, `nixos` or `macos`. A recipe for both kinds is two folders.
 - A recipe is a module on top of omaflake's own guest modules (guest hardware, the omaflake agent, user, keys, locale),
-  never a flake of its own. It can build on another recipe of the same kind (`requires`, then `imports = [ ../minimal ]`).
+  never a flake of its own. It can build on another recipe of the same kind (`requires`, then `imports = [ ../neovim-minimal ]`).
 
 ## Recipes
 
 | Recipe | |
 |---|---|
-| `omaflake/nixos/minimal` | NixOS with the Hyprland desktop |
-| `omaflake/nixos/research` | TeX Live and Typst with a live PDF beside neovim, Jupyter, pandas, pandoc |
+| `omaflake/nixos/neovim-minimal` | NixOS with the Hyprland desktop and the neovim line (Neovim, Zellij) |
+| `omaflake/nixos/neovim-research` | TeX Live and Typst with a live PDF beside neovim, Jupyter, pandas, pandoc |
+| `omaflake/nixos/emacs-minimal` | NixOS with the Hyprland desktop and the emacs line (Emacs with Vertico, Magit, Eglot) |
 | `omaflake/macos/minimal` | macOS with Nix, terminal tools, a minimal Dock and a dark look |
 | `omaflake/macos/research` | TeX Live, VS Code for LaTeX and Typst, WezTerm with Zellij, Homebrew |
 | `omaflake/nixos/lab`, `omaflake/macos/lab` | for developing omaflake itself (shown in developer mode only); `nixos/lab` brings omaflake's Linux app and `omaf ui` to try them (VMs cannot start inside it) |

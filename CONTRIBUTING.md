@@ -20,7 +20,7 @@ description = "Rust development: rustup, rust-analyzer and neovim with the Rust 
 description_de = "Rust-Entwicklung: rustup, rust-analyzer und neovim mit Rust-LSP."     # optional, any language code
 tags = ["rust", "neovim"]        # from tags.toml (add new ones there) – required
 homepage = "https://…"           # optional: where to read more or report problems
-requires = ["omaflake/nixos/minimal"]   # optional: recipes of the same kind this one imports
+requires = ["omaflake/nixos/neovim-minimal"]   # optional: recipes of the same kind this one imports
 
 # How a VM from it runs (defaults for new VMs; the user can change them)
 cpus = 4
@@ -50,8 +50,11 @@ Its module arguments:
 | `settings` | the user's values from omaflake: `user`, `fullName`, `email`, `timeZone`, `locale`, `keyboard`, `macUser` (macOS) |
 | `nix-homebrew` | (macOS) the nix-homebrew flake, for recipes that want Homebrew |
 
-NixOS recipes have home-manager: `home-manager.users.${settings.user} = { … };`. To build on another recipe, list it
-in `requires` and import it relatively: `imports = [ ../minimal ];` (same author and kind) – omaflake keeps the
+NixOS recipes have home-manager: `home-manager.users.${settings.user} = { … };`. A NixOS recipe picks its editor
+line with `omaflake.editor = "neovim";` (Neovim, preconfigured, with Zellij – the default) or `"emacs"` (Emacs,
+preconfigured); the desktop, WezTerm and the terminal tools are the same in both. Name recipes after their line, e.g.
+`neovim-research`, `emacs-research`. To build on another recipe, list it
+in `requires` and import it relatively: `imports = [ ../neovim-minimal ];` (same author and kind) – omaflake keeps the
 `<author>/<kind>/<name>` layout when it downloads recipes, so the path stays valid.
 
 **Variants per architecture.** A file `<system>.nix` next to `default.nix` – e.g. `x86_64-linux.nix` – is added to

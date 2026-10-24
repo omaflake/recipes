@@ -179,6 +179,51 @@
       ]
     },
     {
+      "id": "omaflake.nixos.emacs-minimal",
+      "author": "omaflake",
+      "kind": "nixos",
+      "name": "emacs-minimal",
+      "path": "recipes/omaflake/nixos/emacs-minimal",
+      "description": "NixOS with the Hyprland desktop and the emacs line: Emacs, preconfigured (Catppuccin, Vertico, Magit, Eglot, tree-sitter) – nothing else.",
+      "descriptions": {
+        "de": "NixOS mit dem Hyprland-Desktop und der Emacs-Linie: vorkonfiguriertes Emacs (Catppuccin, Vertico, Magit, Eglot, Tree-sitter) – sonst nichts."
+      },
+      "tags": [
+        "desktop",
+        "hyprland",
+        "emacs"
+      ],
+      "license": "MIT",
+      "lab": false,
+      "systems": [
+        "aarch64-linux"
+      ],
+      "requires": [],
+      "homepage": "",
+      "defaults": {
+        "display": "gpu",
+        "cpus": 4,
+        "memory_gb": 4,
+        "disk_gb": 40,
+        "network": "shared",
+        "share": true,
+        "ephemeral": false
+      },
+      "version": "d0b07e62db3ca94c88465f74d5cc7f6f14433dc4e702b4222a99ac52bd1d5937",
+      "files": [
+        {
+          "path": "default.nix",
+          "size": 468,
+          "sha256": "beb765312995d76d973cee0ad257758d3446efba4d3a4f7c156766e4615a3e66"
+        },
+        {
+          "path": "recipe.toml",
+          "size": 825,
+          "sha256": "a5fcf02645f0895e99123fc3e3e05d0b2adf3a69011850216fd63f85ee6a205d"
+        }
+      ]
+    },
+    {
       "id": "omaflake.nixos.lab",
       "author": "omaflake",
       "kind": "nixos",
@@ -230,18 +275,20 @@
       ]
     },
     {
-      "id": "omaflake.nixos.minimal",
+      "id": "omaflake.nixos.neovim-minimal",
       "author": "omaflake",
       "kind": "nixos",
-      "name": "minimal",
-      "path": "recipes/omaflake/nixos/minimal",
-      "description": "NixOS with the Hyprland desktop – nothing else.",
+      "name": "neovim-minimal",
+      "path": "recipes/omaflake/nixos/neovim-minimal",
+      "description": "NixOS with the Hyprland desktop and the neovim line: Neovim, preconfigured, and Zellij – nothing else.",
       "descriptions": {
-        "de": "NixOS mit dem Hyprland-Desktop – sonst nichts."
+        "de": "NixOS mit dem Hyprland-Desktop und der Neovim-Linie: vorkonfiguriertes Neovim und Zellij – sonst nichts."
       },
       "tags": [
         "desktop",
-        "hyprland"
+        "hyprland",
+        "neovim",
+        "zellij"
       ],
       "license": "MIT",
       "lab": false,
@@ -259,26 +306,26 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "1402004d58f95f73090cb50301dffe70795820976379e456fff50268d5b5a778",
+      "version": "41a0051932e3063cf5cf95274c803dd0736dbd4b663d79d2cb2c8b419b640e97",
       "files": [
         {
           "path": "default.nix",
-          "size": 102,
-          "sha256": "6ee0a9f87b172db28e2a0b2c3e709d5f90c426e2271cf45b799a2dff3ab992ba"
+          "size": 184,
+          "sha256": "9f97c08df7d479662c2dde6b63602acebf4a917eb3bc9c71978681cc1df4f6e3"
         },
         {
           "path": "recipe.toml",
-          "size": 835,
-          "sha256": "218faa580c43cda964504797ac52c787a626e7c541f1c89a2a9b9819a40c0ade"
+          "size": 975,
+          "sha256": "083592d68b4df592754de38b4752e9d8fb09881a217545d854b2289d69781b82"
         }
       ]
     },
     {
-      "id": "omaflake.nixos.research",
+      "id": "omaflake.nixos.neovim-research",
       "author": "omaflake",
       "kind": "nixos",
-      "name": "research",
-      "path": "recipes/omaflake/nixos/research",
+      "name": "neovim-research",
+      "path": "recipes/omaflake/nixos/neovim-research",
       "description": "Writing and research: TeX Live (full) and Typst with a live PDF beside neovim (vimtex, zathura), Jupyter, pandas, pandoc.",
       "descriptions": {
         "de": "Schreiben und Forschen: TeX Live (komplett) und Typst mit Live-PDF neben neovim (vimtex, zathura), Jupyter, pandas, pandoc."
@@ -307,17 +354,17 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "5253857a65914cef5b15c79174bbfac8611c66268745390695ae1a281671aa4d",
+      "version": "ebd5d646d2430e720a217ba86e46f062ff7590f7ff9f9ff94cd50e75c09fb92e",
       "files": [
         {
           "path": "default.nix",
-          "size": 2431,
-          "sha256": "ab6b5606e7ace8fb05bbff109d103f2326b25743fc014594ef6ced4ee27e8937"
+          "size": 2489,
+          "sha256": "55a93e19dea6091fe6c5f4e74f2c32999b2ffb9a17444e371f388fb5018333ee"
         },
         {
           "path": "recipe.toml",
-          "size": 811,
-          "sha256": "d008410690ff4ad20d0caf60a20db77afa1d0b1563527c67f2ce2ab61e9b4498"
+          "size": 818,
+          "sha256": "88f42ccd52e0b43cd973d287de55d93e1516014206170c3459d57e001be9e3db"
         }
       ]
     }

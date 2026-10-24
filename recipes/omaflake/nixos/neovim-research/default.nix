@@ -1,11 +1,12 @@
-# Recipe: research – reading, writing, analysis
+# Recipe: neovim-research – reading, writing, analysis (neovim line)
 # LaTeX (TeX Live, full) and Typst with a live PDF beside the editor: neovim compiles on every save (vimtex +
 # latexmk; for Typst `typst watch`), zathura shows the PDF next to it and reloads it; SyncTeX jumps between text and
 # PDF (Ctrl+click in zathura → the line in neovim). Plus Python for analysis, pandoc.
 { lib, pkgs, settings, ... }:
 
 {
-  networking.hostName = "research";
+  networking.hostName = "neovim-research";
+  omaflake.editor = "neovim";
 
   environment.systemPackages = with pkgs; [
     (python3.withPackages (ps: with ps; [ numpy pandas matplotlib jupyterlab ]))
