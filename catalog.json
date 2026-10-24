@@ -358,12 +358,12 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "2226cf6683ddc9af5c3cee1c77ca6373dd30768ddcf79d00dbd5bbd91e4aff39",
+      "version": "e377aaa7c3a7a88892867fbd036913031d981ddc273cd70d42487688259622e1",
       "files": [
         {
           "path": "default.nix",
-          "size": 2489,
-          "sha256": "55a93e19dea6091fe6c5f4e74f2c32999b2ffb9a17444e371f388fb5018333ee"
+          "size": 3827,
+          "sha256": "6fe5adeea42415867d525adea91bf6bc7c37f51067886f0540324050166d46cf"
         },
         {
           "path": "recipe.toml",
