@@ -1,13 +1,16 @@
 # omaflake recipes
 
 The official catalog of recipes for [omaflake](https://github.com/omaflake/omaflake) – disposable NixOS and macOS
-VMs on Apple silicon. A recipe declares what a VM is: what is inside it (a NixOS or nix-darwin module) and how it runs
+VMs on Mac and Linux. A recipe declares what a VM is: what is inside it (a NixOS or nix-darwin module) and how it runs
 (CPUs, memory, network, …). omaflake builds an image from a recipe and starts VMs from that image.
 
 omaflake does not ship recipes in the app. It knows this repository as its default **recipe source**: the Recipes tab
 lists what is here, and you download the recipes you want. Recipes by `omaflake` from this repository are marked as
 official and suggested at the first start. Anyone can propose a recipe by pull request (CONTRIBUTING.md); the core
 team reviews it (REVIEW.md) before it is merged. You can also run a catalog of your own (FORKING.md).
+
+How recipes work – `recipe.toml`, architectures, variants, recipe sources: [Writing recipes](https://omaflake.dev/recipes/)
+on omaflake.dev.
 
 ## Layout
 

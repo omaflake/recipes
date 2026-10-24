@@ -5,7 +5,7 @@ folders next to it – nothing more. This repository is the default source; you 
 (Settings → Recipe Sources) and switch each one on or off. Use your own source for recipes your team shares, for
 recipes you do not want to publish, or to run a curated catalog of your own.
 
-Recipes from other sources are **not reviewed by the omaflake team**. Their Nix code runs on your Mac when you build
+Recipes from other sources are **not reviewed by the omaflake team**. Their Nix code runs on your computer when you build
 them – add only sources you trust. omaflake marks recipes as official only when they are by `omaflake` *and* come
 from this repository; an author name alone is not enough.
 
@@ -48,7 +48,7 @@ GitHub Pages, Codeberg, GitLab, your own web server or bucket. Only HTTPS URLs a
 
 ## Testing with a local folder
 
-A source can also be a folder on your Mac – a checkout of your repository. omaflake uses its recipes as they are on
+A source can also be a local folder – a checkout of your repository. omaflake uses its recipes as they are on
 disk (no `catalog.json` needed), so a change is built the next time. That is the quickest way to try a recipe before
 you push or open a pull request.
 
