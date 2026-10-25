@@ -37,6 +37,8 @@ let
 
   nvimInit = pkgs.writeText "init.lua" ''
     -- neovim in macos/research: vimtex (\ll compiles, \lv shows the PDF in Preview). Edit freely.
+    -- The guest's look: colours from the image (/etc/omaflake/look/nvim.lua; nothing there in older images)
+    pcall(dofile, '/etc/omaflake/look/nvim.lua')
     vim.g.vimtex_view_method = 'general'
     vim.g.vimtex_view_general_viewer = 'open'
     vim.opt.number = true
@@ -58,6 +60,8 @@ in
     wezterm zellij
     pandoc lazygit
   ]);
+  # The Zellij session "main" from any shell (WezTerm's Cmd + Shift + Enter opens a window in it)
+  environment.shellAliases.zj = "zellij attach --create main";
 
   fonts.packages = [ pkgs.nerd-fonts.jetbrains-mono ];
 

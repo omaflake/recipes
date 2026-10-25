@@ -2,8 +2,12 @@
 # LaTeX (TeX Live, full) and Typst with a live PDF beside the editor: neovim compiles on every save (vimtex +
 # latexmk; for Typst `typst watch`), zathura shows the PDF next to it and reloads it; SyncTeX jumps between text and
 # PDF (Ctrl+click in zathura → the line in neovim). Plus Python for analysis, pandoc.
-{ lib, pkgs, settings, ... }:
+{ config, lib, pkgs, settings, ... }:
 
+let
+  # The guest look's colours (omaflake's modules/look.nix; null for vanilla and in omaflake without looks)
+  look = config.omaflake.lookColors or null;
+in
 {
   networking.hostName = "neovim-research";
   omaflake.editor = "neovim";
@@ -18,17 +22,20 @@
   ];
 
   home-manager.users.${settings.user} = {
-    # zathura in the desktop's colours, SyncTeX on; it reloads a PDF when it changes
+    # zathura in the look's colours (a dark look shows PDFs inverted in its colours), SyncTeX on; it reloads a PDF
+    # when it changes
     programs.zathura = {
       enable = true;
       options = {
         synctex = true;
+        selection-clipboard = "clipboard";
+      } // lib.optionalAttrs (look != null) {
+        default-bg = "#${look.base}";
+      } // lib.optionalAttrs (look != null && look.dark) {
         recolor = true;
         recolor-keephue = true;
-        default-bg = "#1e1e2e";
-        recolor-darkcolor = "#cdd6f4";
-        recolor-lightcolor = "#1e1e2e";
-        selection-clipboard = "clipboard";
+        recolor-darkcolor = "#${look.text}";
+        recolor-lightcolor = "#${look.base}";
       };
     };
 

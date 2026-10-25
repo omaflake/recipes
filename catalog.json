@@ -159,12 +159,12 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "3130e6d57190ed0f1781cedbdf08987c7b4cd7d6d430059901089d7af08c5f97",
+      "version": "50e57f23509dd030b577e916dfd494870384c82b448dc3c49e1a387bae871afe",
       "files": [
         {
           "path": "default.nix",
-          "size": 4392,
-          "sha256": "8b1edbcea9385b755565c27e7e28d8904152fcf59813bb7da6900330724455de"
+          "size": 4711,
+          "sha256": "114ea7aa063dc1af8f14cedf8dc5ca3765f0a62de2fc97cf2d75488d86a1951f"
         },
         {
           "path": "recipe.toml",
@@ -173,8 +173,8 @@
         },
         {
           "path": "wezterm.lua",
-          "size": 888,
-          "sha256": "c6b1e1a5c1b48598a70f69c8bdd111c3f544f3d03ee2d40b24b850f83a52607e"
+          "size": 1668,
+          "sha256": "f77ff3663f2ec8bd2cef5914788a161aa7a14cc0d356de31a94c1ba04495b368"
         }
       ]
     },
@@ -358,12 +358,12 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "e377aaa7c3a7a88892867fbd036913031d981ddc273cd70d42487688259622e1",
+      "version": "1c8fd930ad22d56b5b2c0fec7812fbf441bacc0ed97384068f595d456cb3ff45",
       "files": [
         {
           "path": "default.nix",
-          "size": 3827,
-          "sha256": "6fe5adeea42415867d525adea91bf6bc7c37f51067886f0540324050166d46cf"
+          "size": 4169,
+          "sha256": "f0c68cecbf91d70679f6ca1785c1e82679c2ab8d3631ce85d5e79850da4aa56b"
         },
         {
           "path": "recipe.toml",
