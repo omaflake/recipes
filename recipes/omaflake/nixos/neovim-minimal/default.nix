@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 # Recipe: neovim-minimal – base and desktop with the neovim line (Neovim, Zellij), nothing else
 { ... }:
 

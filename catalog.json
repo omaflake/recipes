@@ -39,12 +39,12 @@
         "ephemeral": true,
         "microphone": true
       },
-      "version": "6aab037ac5b75ca4156305cdf7b69e3e332d7be54c52e8c578d2bbd77a15001b",
+      "version": "ec2a24b092ec5772f32408542e7df82e14c41f0decd3ad4c37139b3b5f89eb00",
       "files": [
         {
           "path": "default.nix",
-          "size": 2042,
-          "sha256": "22f99a02894d3aa6db8df745e3a1ef9ff2042bf1238f0cb9aca78fc0d98109c1"
+          "size": 2073,
+          "sha256": "3eaeb4ab8e45dfa72df6c69817643a8c67fac29c05bef9d68466b08a481fadf7"
         },
         {
           "path": "omaflake-test.icns",
@@ -53,8 +53,8 @@
         },
         {
           "path": "omaflake-test.sh",
-          "size": 2578,
-          "sha256": "0dfccd7a6e713faaf069566a5df8939c0fe212e052e6c73be2a5abe803e2cd56"
+          "size": 2609,
+          "sha256": "718439caf4715af37b3094f5f3c5077e71018c711595c12b6512e2beff3b6035"
         },
         {
           "path": "recipe.toml",
@@ -93,7 +93,7 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "c7bc4569c3068c9c0a8aef6c69a61bfe3bce090254071474de058a5f9cdda717",
+      "version": "ee216ca88ae211444d8d52e4e19fc8adb059fe2f3d1960c80ed79cdec0403a77",
       "files": [
         {
           "path": "assets/safari-bookmarks-seed.plist",
@@ -112,8 +112,8 @@
         },
         {
           "path": "default.nix",
-          "size": 6449,
-          "sha256": "213fca5fa1f9a92a5882e46ff253c3bb0be7e8d5cb75e295c618f36c5c5e5eda"
+          "size": 6480,
+          "sha256": "2af3b399158221d90e3b0353fdec605776d831bac30923fe6d5c8d9b74133a36"
         },
         {
           "path": "recipe.toml",
@@ -159,12 +159,12 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "50e57f23509dd030b577e916dfd494870384c82b448dc3c49e1a387bae871afe",
+      "version": "66f624b106681999a1070b497a2afec16215bd44308eadf4b953deb03ecc03ea",
       "files": [
         {
           "path": "default.nix",
-          "size": 4711,
-          "sha256": "114ea7aa063dc1af8f14cedf8dc5ca3765f0a62de2fc97cf2d75488d86a1951f"
+          "size": 4742,
+          "sha256": "6da740023f3c5fa10035ac5d045ea6fffca7bbfbb655ed874472050534cfed7a"
         },
         {
           "path": "recipe.toml",
@@ -173,8 +173,8 @@
         },
         {
           "path": "wezterm.lua",
-          "size": 1668,
-          "sha256": "f77ff3663f2ec8bd2cef5914788a161aa7a14cc0d356de31a94c1ba04495b368"
+          "size": 1700,
+          "sha256": "92699c0f6bf9737d24039a69a27e39fe3b91741484e2fc05e274d773cf4cd021"
         }
       ]
     },
@@ -210,12 +210,12 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "039e260ee8f08f340688a3d9929c1b86b6ba9fd2e9d69b986cb57d8c2be6c7e9",
+      "version": "eb519cfbb40bd7d7da28f85ba73502fd891d55e481146f9fbfa3939160f5290d",
       "files": [
         {
           "path": "default.nix",
-          "size": 468,
-          "sha256": "beb765312995d76d973cee0ad257758d3446efba4d3a4f7c156766e4615a3e66"
+          "size": 499,
+          "sha256": "3f2a57581fb549df31fed28c21e8a38dcceed49d50f9476355b1f419ee791446"
         },
         {
           "path": "recipe.toml",
@@ -257,17 +257,17 @@
         "camera": true,
         "microphone": true
       },
-      "version": "6c9e7030d1cb7c3a5f995d2c658243dd3a7986c014b10a78ad1a6c58ad6d5c67",
+      "version": "3667d6268533893de3251a6a04c4dba15711dad7def022dab0dace66d5a9cbb5",
       "files": [
         {
           "path": "default.nix",
-          "size": 3612,
-          "sha256": "2a30ef9c61fee68410165e443fbe9704cc27a2982494ae4442bf37a5a2e0ed05"
+          "size": 3643,
+          "sha256": "c95817ce7147f0b2e42b69729191667a8902783cdf26c05cf70634fdb1cfa337"
         },
         {
           "path": "omaflake-test.py",
-          "size": 7962,
-          "sha256": "c3ecdf4bf6ab3c0d189557a20d719b4282032fa3264bbeab7fcdf08593cdd030"
+          "size": 7993,
+          "sha256": "9b053bf8d3db7fb2a8e5df59df0fb2b054892cee0e03f5a8ebd2bb7f225143e3"
         },
         {
           "path": "recipe.toml",
@@ -309,12 +309,12 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "30640361335dfa81d4a6da0f0915d94792103030e50d25ae12d40a031d842355",
+      "version": "57d00575f1f48354e63fed21ce295d33eeb3aa17e61c72abe8bfa6f5ae6c7aaf",
       "files": [
         {
           "path": "default.nix",
-          "size": 184,
-          "sha256": "9f97c08df7d479662c2dde6b63602acebf4a917eb3bc9c71978681cc1df4f6e3"
+          "size": 215,
+          "sha256": "f91c3d5323c1a804625061d5ea125b6f8c1dd305004a5f1a1c9960b15d0c78a7"
         },
         {
           "path": "recipe.toml",
@@ -358,12 +358,12 @@
         "share": true,
         "ephemeral": false
       },
-      "version": "1c8fd930ad22d56b5b2c0fec7812fbf441bacc0ed97384068f595d456cb3ff45",
+      "version": "722c595d3aa3ac8aaaada531154a129f920406698e005ba5cc22f25ff5f1f228",
       "files": [
         {
           "path": "default.nix",
-          "size": 4169,
-          "sha256": "f0c68cecbf91d70679f6ca1785c1e82679c2ab8d3631ce85d5e79850da4aa56b"
+          "size": 4200,
+          "sha256": "f80795a024f1bf7f27e43699b815d30b92cf0b7d0aed912ae8329d4b26bcef39"
         },
         {
           "path": "recipe.toml",

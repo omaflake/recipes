@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 # Recipe: lab (macOS) – omaflake's development recipe for macOS guests, like nixos/lab: everything of minimal,
 # plus the "omaflake Test" app (sound, microphone, clipboard status; in the Dock and via Spotlight) and debug tools.
 { lib, pkgs, ... }:

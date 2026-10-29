@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 # Recipe: research (macOS) – writing and working in the terminal: everything of minimal, plus TeX Live (full, from Nix),
 # VS Code set up for LaTeX and Typst, WezTerm with Zellij, Typst, pandoc, lazygit and Homebrew.
 # User files (WezTerm, VS Code settings, neovim with vimtex) are written once and then belong to the user.

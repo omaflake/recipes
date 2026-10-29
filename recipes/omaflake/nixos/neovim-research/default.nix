@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 # Recipe: neovim-research – reading, writing, analysis (neovim line)
 # LaTeX (TeX Live, full) and Typst with a live PDF beside the editor: neovim compiles on every save (vimtex +
 # latexmk; for Typst `typst watch`), zathura shows the PDF next to it and reloads it; SyncTeX jumps between text and

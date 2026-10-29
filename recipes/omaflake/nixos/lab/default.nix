@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 # Recipe: lab – omaflake's development recipe
 # Everything to check the Mac integrations (camera, sound, microphone, clipboard, 3D) plus debug tools, and omaflake
 # itself (the Linux app `omaflake`, the CLI `omaf`, its TUI `omaf ui`) to try the Linux interfaces. VMs cannot start in

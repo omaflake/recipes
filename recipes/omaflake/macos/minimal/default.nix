@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 # Recipe: minimal (macOS) – the base plus Nix, terminal tools, a minimal Dock, a dark, graphite look and a
 # private-by-default Safari with google.com as start page.
 # Keys were read from a guest after setting them by hand in System Settings (plan BM22).

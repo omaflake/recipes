@@ -1,3 +1,4 @@
+-- SPDX-License-Identifier: MIT
 -- WezTerm in omaflake's macos/research recipe: the guest's look, JetBrains Mono Nerd Font; a window is a plain shell,
 -- Cmd + Shift + Enter opens one in Zellij.
 -- Written once into ~/.wezterm.lua – edit it freely, omaflake does not overwrite it.

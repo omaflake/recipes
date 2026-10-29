@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: MIT
 # Recipe: emacs-minimal – base and desktop with the emacs line, nothing else
 # Emacs (pure GTK, native on Wayland) in the desktop's colours, with Vertico, Consult, Corfu, Magit, Eglot and
 # tree-sitter; Cmd+E opens it, and $EDITOR in WezTerm opens files in it. The configuration is omaflake's
